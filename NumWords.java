@@ -8,8 +8,8 @@ public class NumWords {
 		 int hundreds = (number / 100) % 10;  // Get the hundreds place
 		 int tens = (number / 10) % 10;       // Get the tens place
 		 int ones = number % 10;              // Get the ones place
-		 
+		 int higherHundreds = number / 100;
 		 // Print the result in the specified format
-		 System.out.println(hundreds + " hundreds, " + tens + " tens, and " + ones + " ones.");
+		 System.out.println( higherHundreds + hundreds + " hundreds, " + tens + " tens, and " + ones + " ones.");
 	}
 }
