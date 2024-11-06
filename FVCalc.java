@@ -3,12 +3,11 @@ public class FVCalc {
 	public static void main(String[] args){
 		
 		int currentValue = Integer.parseInt(args[0]);
-		double interest = Double.parseDouble(args[1]);
+		double interest = Double.parseDouble(args[1])/100;
 		int years = Integer.parseInt(args[2]);
-		double futurevalue = (currentValue *(((interest)/100) + 1));
-		futurevalue=futurevalue*futurevalue/100;
+		double futurevalue = currentValue * Math.pow(interest + 1 ,years);
         System.out.println("After " + years + " years" + ", a" + " $" +currentValue + 
-		         " saved at " + interest +"% will yield " + "$" + ((int)futurevalue));
+		         " saved at " + (100 * interest) +"% will yield " + "$" + ((int)futurevalue));
 		
 
 		
