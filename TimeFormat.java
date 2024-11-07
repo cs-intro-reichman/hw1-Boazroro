@@ -10,10 +10,17 @@ public class TimeFormat {
         // Replace this comment with the rest of your code
 		if (hours>=12) 
 		{
-			if ((args[0].charAt(3)/100)%10 == 0 || ((args[0].charAt(0)/100)%10)==0)
+			if ((args[0].charAt(0)/100)%10 == 0  )
 			{
-				System.out.println("0" + hours + ":" + "0" + minutes + " PM");
 
+			if (((args[0].charAt(3)/100)%10)==0) {
+				System.out.println("0" + hours + ":" + "0" + minutes + " PM");
+					
+				}
+				else
+				{
+				System.out.println("0" + hours + ":" + minutes + " PM");
+				}
 			}
 			else
 			{
@@ -26,10 +33,19 @@ public class TimeFormat {
 		}
 		else
 		{
-			if ((args[0].charAt(3)/100)%10 == 0 || ((args[0].charAt(0)/100)%10) == 0) 
+			if ((args[0].charAt(0)/100)%10 == 0)
 			
 			{
-				System.out.println("0" + hours + ":" + "0" + minutes + " AM");
+				if (((args[0].charAt(3)/100)%10) == 0) 
+				{
+					System.out.println("0" + hours + ":" + "0" + minutes + " AM");
+					
+				}
+				else
+				{
+					System.out.println("0" + hours + ":" + minutes + " AM");
+				}
+				
 
 			}
 			else
