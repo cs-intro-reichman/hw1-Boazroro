@@ -7,56 +7,30 @@ public class TimeFormat {
 
 		int minutes = Integer.parseInt("" + args[0].charAt(3) + args[0].charAt(4));
 		
-        // Replace this comment with the rest of your code
-		if (hours>=12) 
+        String res = "";
+		if (hours>12) 
 		{
-			if ((args[0].charAt(0)/100)%10 == 0  )
-			{
-
-			if (((args[0].charAt(3)/100)%10)==0) {
-				System.out.println("0" + hours + ":" + "0" + minutes + " PM");
-					
-				}
-				else
-				{
-				System.out.println("0" + hours + ":" + minutes + " PM");
-				}
-			}
-			else
-			{
-				System.out.println(hours + ":" + minutes + " PM");
-
-			}
+		res = res + (hours -12);
+		}
+		else
+		{
+			res = res + hours;
 			
-	
+		}
+		res= res + ":" ;
+		if (minutes<10) 
+		{
+			res = res + "0";
+		}
+		res = res + minutes;
+		if (hours>12) 
+		{
+			System.out.println(res + " PM");
 			
 		}
 		else
 		{
-			if ((args[0].charAt(0)/100)%10 == 0)
-			
-			{
-				if (((args[0].charAt(3)/100)%10) == 0) 
-				{
-					System.out.println("0" + hours + ":" + "0" + minutes + " AM");
-					
-				}
-				else
-				{
-					System.out.println("0" + hours + ":" + minutes + " AM");
-				}
-				
-
-			}
-			else
-			{
-				System.out.println(hours + ":" + minutes + " AM");
-
-			}
-	 {
-				
-			
-		}
+			System.out.println(res + " AM");
 		}
 	}
 }
